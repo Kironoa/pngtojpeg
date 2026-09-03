@@ -103,9 +103,9 @@ export default function Home() {
         <h1 className="mb-2 text-3xl font-bold text-center text-black dark:text-white">
           PNG to JPEG Converter
         </h1>
-        <p className="mb-8 text-center text-gray-500 dark:text-gray-400">
-          Upload a PNG image and convert it to high-quality JPEG
-        </p>
+          <p className="mb-8 text-center text-gray-500 dark:text-gray-400">
+            Upload a PNG image and convert it to high-quality JPEG (Lossy Compression)
+          </p>
 
         <div
           className={`relative rounded-2xl border-2 border-dashed p-12 text-center cursor-pointer transition-colors ${
@@ -192,9 +192,9 @@ export default function Home() {
             </div>
 
             <div className="w-full rounded-xl bg-white p-4 shadow-sm border dark:border-gray-800">
-              <label className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
-                JPEG Quality: {Math.round(quality * 100)}%
-              </label>
+                <label className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+                  JPEG Quality: {Math.round(quality * 100)}% — Compression: Lossy | Method: JPEG Compression
+                </label>
               <input
                 type="range"
                 min="0.1"
@@ -217,6 +217,9 @@ export default function Home() {
             <h2 className="text-xl font-semibold text-gray-800 dark:text-white">
               Converted Image
             </h2>
+            <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">
+              Compression: Lossy | Algorithm: JPEG Compression
+            </span>
             <img
               src={jpegPreview}
               alt="JPEG result"
