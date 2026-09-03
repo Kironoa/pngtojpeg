@@ -1,0 +1,66 @@
+JPEG COMPRESSION EXPLAINED (EASY WORDS)
+======================================
+
+WHAT IS JPEG COMPRESSION?
+-------------------------
+JPEG is a way to make image files smaller. It throws away some picture details
+that your eyes don't notice easily. This is called "lossy" compression because
+some data is lost forever.
+
+HOW DOES IT WORK? (STEP BY STEP)
+---------------------------------
+
+1. CHANGE COLORS
+   The picture changes from Red-Green-Blue (RGB) colors to Brightness and
+   Color (YCbCr). This helps the computer focus on what matters most.
+
+2. SHRINK THE SIZE
+   The picture is cut in half in both width and height. This alone makes the
+   file much smaller.
+
+3. MAKE SMALL BLOCKS
+   The picture is split into tiny squares (8x8 pixels each). Each square is
+   worked on separately.
+
+4. USE MATH (DCT)
+   A math trick called Discrete Cosine Transform turns the picture blocks
+   into numbers. It keeps the important parts and makes the small parts
+   into zeros.
+
+5. THROW AWAY WEAK DETAILS
+   Numbers that are very small become zero. The quality slider controls
+   how many numbers get thrown away. Higher quality = fewer numbers gone.
+
+6. PACK THE ZEROS
+   All the zeros are packed together using a clever trick called Huffman
+   coding. Zeros in a row are stored as one short note instead of many
+   zeros.
+
+7. SAVE THE FILE
+   The final packed numbers are saved as a .jpeg file. The file is much
+   smaller than the original.
+
+WHY IS IT LOSSY?
+----------------
+Every time you save a JPEG, some details are thrown away. You cannot get
+them back. That's why it's called "lossy" - you lose some quality each
+time.
+
+WHY DO WE USE IT?
+-----------------
+- Makes files tiny (good for sharing and storing)
+- Your eyes can't see the missing details most of the time
+- Works great for photos and pictures with lots of colors
+
+QUALITY SLIDER EXPLAINED
+------------------------
+- 100% = almost no details thrown away (bigger file)
+- 92% = good balance (small file, looks great)
+- 50% = lots of details gone (very small file, some blurry spots)
+- 10% = almost everything gone (tiny file, very blurry)
+
+PNG vs JPEG
+-----------
+PNG keeps ALL details (no quality lost) but makes big files.
+JPEG throws away some details but makes tiny files.
+Use PNG for logos and text. Use JPEG for photos.
