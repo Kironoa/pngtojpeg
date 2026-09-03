@@ -1,7 +1,7 @@
 {
   "name": "png-to-jpeg-converter",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://Kironoa.github.io/pngtojpeg",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
